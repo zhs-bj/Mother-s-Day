@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="谢谢你，做我的妈妈 - 母亲节特别礼物">
+    <title>谢谢你，做我的妈妈</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 飘落的花瓣/爱心容器 -->
+    <div class="falling-container" aria-hidden="true"></div>
+
+    <!-- 1. 开屏封面 Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-card">
+            <h1 class="hero-title">妈妈，母亲节快乐</h1>
+            <p class="hero-subtitle">这是我亲手做给你的一份小小礼物</p>
+            <div class="hero-text">
+                <p>妈妈，今天我想认真对你说几句话。</p>
+                <p>虽然这只是一页小小的网页，</p>
+                <p>但里面藏着我很多很多的爱。</p>
+            </div>
+            <button class="hero-btn" onclick="scrollToSection('typewriter')" aria-label="点开给妈妈的礼物">
+                点开给妈妈的礼物
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. 打字机祝福区 -->
+    <section id="typewriter" class="typewriter-section">
+        <div class="section-container">
+            <h2 class="section-title">写给妈妈的话</h2>
+            <div class="letter-paper">
+                <p id="typewriter-text" class="typewriter-text" aria-live="polite"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 回忆时间线 -->
+    <section id="timeline" class="timeline-section">
+        <div class="section-container">
+            <h2 class="section-title">这些年，你陪我慢慢长大</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon" aria-hidden="true">🏠</div>
+                    <div class="timeline-card">
+                        <h3>小时候</h3>
+                        <p>那时候我总觉得你无所不能，什么问题到了你那里都能解决。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon" aria-hidden="true">🎒</div>
+                    <div class="timeline-card">
+                        <h3>上学后</h3>
+                        <p>你一边担心我受委屈，一边又鼓励我勇敢往前走。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon" aria-hidden="true">☀️</div>
+                    <div class="timeline-card">
+                        <h3>青春期</h3>
+                        <p>我偶尔不懂事，但你还是一次次包容我、等我长大。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon" aria-hidden="true">📞</div>
+                    <div class="timeline-card">
+                        <h3>离家后</h3>
+                        <p>我离你越来越远，却也越来越懂得家的分量。</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon" aria-hidden="true">❤️</div>
+                    <div class="timeline-card">
+                        <h3>现在</h3>
+                        <p>我想换我来好好爱你，陪你开心，陪你慢慢变老。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 照片墙 / 回忆相册 -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-container">
+            <h2 class="section-title">我们的珍贵瞬间</h2>
+            <div class="gallery-grid">
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo1.jpg" alt="和妈妈的珍贵回忆1" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">和你在一起的日子，都是好日子</p>
+                </div>
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo2.jpg" alt="和妈妈的珍贵回忆2" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">有你的地方，就有家的感觉</p>
+                </div>
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo3.jpg" alt="和妈妈的珍贵回忆3" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">你的笑，是我最熟悉的温暖</p>
+                </div>
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo4.jpg" alt="和妈妈的珍贵回忆4" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">谢谢你把我一点点养大</p>
+                </div>
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo5.jpg" alt="和妈妈的珍贵回忆5" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">我会记得这些平凡又珍贵的瞬间</p>
+                </div>
+                <div class="polaroid" onclick="openLightbox(this)">
+                    <div class="photo-wrapper">
+                        <img src="images/photo6.jpg" alt="和妈妈的珍贵回忆6" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder');">
+                    </div>
+                    <p class="polaroid-caption">以后也想陪你拍更多照片</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 照片放大查看模态框 -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-label="照片预览">
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="关闭">&times;</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- 5. 妈妈的超能力清单 -->
+    <section id="superpowers" class="superpowers-section">
+        <div class="section-container">
+            <h2 class="section-title">妈妈的隐藏技能图鉴</h2>
+            <div class="superpowers-grid">
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">👀</div>
+                    <p>一眼看出我有没有吃饱</p>
+                </div>
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">🧥</div>
+                    <p>远程判断我是不是穿少了</p>
+                </div>
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">🍳</div>
+                    <p>能把普通饭菜做成家的味道</p>
+                </div>
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">💭</div>
+                    <p>嘴上说不管我，其实心里最牵挂</p>
+                </div>
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">💪</div>
+                    <p>明明很累，还总说"没事"</p>
+                </div>
+                <div class="superpower-card" data-aos="fade-up">
+                    <div class="superpower-icon">✨</div>
+                    <p>总能在我需要的时候，给我力量</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 给妈妈的一封信 -->
+    <section id="letter" class="letter-section">
+        <div class="section-container">
+            <h2 class="section-title">给妈妈的一封信</h2>
+            <div id="envelope" class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <p class="envelope-text">有一封信，写给我最爱的妈妈</p>
+                    <button class="open-letter-btn" onclick="openLetter()" aria-label="打开这封信">打开这封信</button>
+                </div>
+            </div>
+            <div id="letter-paper" class="letter-content hidden">
+                <div class="letter-inner">
+                    <p class="letter-salutation">妈妈：</p>
+                    <p>以前我总觉得你的关心很普通，</p>
+                    <p>直到我慢慢长大，才发现那是世界上最珍贵的爱。</p>
+                    <p>你总是把最好的留给我，</p>
+                    <p>把担心藏在一句句提醒里，</p>
+                    <p>把辛苦藏在一句"没事"里。</p>
+                    <p>我可能不常把爱说出口，</p>
+                    <p>但我真的一直都记得：</p>
+                    <p>是你陪我长大，</p>
+                    <p>是你给了我最安心的家，</p>
+                    <p>也是你让我有勇气去看更大的世界。</p>
+                    <p>以后，我也想成为你的依靠。</p>
+                    <p>愿你每天都开心，少一点操心，</p>
+                    <p>多一点属于自己的快乐。</p>
+                    <p class="letter-closing">妈妈，母亲节快乐。</p>
+                    <p class="letter-closing">我爱你。</p>
+                    <p class="letter-signature">—— 爱你的孩子</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 妈妈专属愿望兑换券 -->
+    <section id="coupons" class="coupons-section">
+        <div class="section-container">
+            <h2 class="section-title">妈妈专属愿望兑换券</h2>
+            <div class="coupons-grid">
+                <div class="coupon-card" data-coupon="1">
+                    <div class="coupon-icon">🚶</div>
+                    <p class="coupon-text">陪妈妈散步一次</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取陪妈妈散步一次">点击领取</button>
+                </div>
+                <div class="coupon-card" data-coupon="2">
+                    <div class="coupon-icon">🍽️</div>
+                    <p class="coupon-text">给妈妈做一顿饭</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取给妈妈做一顿饭">点击领取</button>
+                </div>
+                <div class="coupon-card" data-coupon="3">
+                    <div class="coupon-icon">🛍️</div>
+                    <p class="coupon-text">陪妈妈逛街一天</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取陪妈妈逛街一天">点击领取</button>
+                </div>
+                <div class="coupon-card" data-coupon="4">
+                    <div class="coupon-icon">📱</div>
+                    <p class="coupon-text">主动打电话一周三次</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取主动打电话一周三次">点击领取</button>
+                </div>
+                <div class="coupon-card" data-coupon="5">
+                    <div class="coupon-icon">📸</div>
+                    <p class="coupon-text">帮妈妈拍一组漂亮照片</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取帮妈妈拍一组漂亮照片">点击领取</button>
+                </div>
+                <div class="coupon-card" data-coupon="6">
+                    <div class="coupon-icon">✈️</div>
+                    <p class="coupon-text">带妈妈出去旅行一次</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取带妈妈出去旅行一次">点击领取</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兑换成功弹窗 -->
+    <div id="coupon-modal" class="modal" role="dialog" aria-modal="true" aria-label="兑换成功">
+        <div class="modal-content">
+            <p class="modal-text">兑换成功！</p>
+            <p>请妈妈随时向我使用，本人不得赖账。</p>
+            <button class="modal-close" onclick="closeModal()" aria-label="关闭弹窗">知道啦</button>
+        </div>
+    </div>
+
+    <!-- 8. 结尾彩蛋 -->
+    <section id="ending" class="ending-section">
+        <div class="section-container">
+            <h2 class="section-title">最后，还有一句话</h2>
+            <div class="ending-content">
+                <p class="ending-text">"妈妈，谢谢你做我的妈妈。</p>
+                <p class="ending-text">如果可以，下辈子我还想做你的孩子。"</p>
+                <button class="ending-btn" onclick="showLove()" aria-label="点一下，收下我的爱">点一下，收下我的爱</button>
+                <div id="love-message" class="love-message hidden">
+                    <p>妈妈，我爱你！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 背景音乐按钮 -->
+    <button id="music-btn" class="music-btn" onclick="toggleMusic()" aria-label="播放音乐">
+        <span id="music-icon">🎵</span>
+    </button>
+    <audio id="bgm" src="music/bgm.mp3" loop preload="none"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
