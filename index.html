@@ -190,12 +190,17 @@
                     <p>是你陪我长大，</p>
                     <p>是你给了我最安心的家，</p>
                     <p>也是你让我有勇气去看更大的世界。</p>
+                    <p> 妈妈会问：</p>
+                    <p>“早上吃饭了吗？”</p>
+                    <p>“按时睡觉了吗？”</p>
+                    <p>“累不累啊？” </p>
+                    <p>慢慢的似乎妈妈只能这样参与我的生活</p>
                     <p>以后，我也想成为你的依靠。</p>
                     <p>愿你每天都开心，少一点操心，</p>
                     <p>多一点属于自己的快乐。</p>
                     <p class="letter-closing">妈妈，母亲节快乐。</p>
                     <p class="letter-closing">我爱你。</p>
-                    <p class="letter-signature">—— 爱你的孩子</p>
+                    <p class="letter-signature">—— 爱你的孩子，郑惠珊</p>
                 </div>
             </div>
         </div>
@@ -223,8 +228,8 @@
                 </div>
                 <div class="coupon-card" data-coupon="4">
                     <div class="coupon-icon">📱</div>
-                    <p class="coupon-text">主动打电话一周三次</p>
-                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取主动打电话一周三次">点击领取</button>
+                    <p class="coupon-text">主动打电话一个月两次</p>
+                    <button class="coupon-btn" onclick="claimCoupon(this)" aria-label="领取主动打电话一个月两次">点击领取</button>
                 </div>
                 <div class="coupon-card" data-coupon="5">
                     <div class="coupon-icon">📸</div>
@@ -268,7 +273,10 @@
     <button id="music-btn" class="music-btn" onclick="toggleMusic()" aria-label="播放音乐">
         <span id="music-icon">🎵</span>
     </button>
-    <audio id="bgm" src="music/bgm.mp3" loop preload="none"></audio>
+    <audio id="bgm" loop preload="none">
+        <source src="music/bgm.mp3" type="audio/mpeg">
+        <source src="music/bgm.wav" type="audio/wav">
+    </audio>
 
     <script src="script.js"></script>
 </body>
